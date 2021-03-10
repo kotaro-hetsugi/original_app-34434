@@ -1,0 +1,40 @@
+    <%= form_with(model: post, local: true) do |f| %>
+      <%#<%= f.file_field :image, id:"item-image" %>
+      <div class="weight-bold-text">
+       【必須】投稿画像
+      </div>
+      <%= f.file_field :image, placeholder:"gazou", id:"item-image" %>
+        
+      <div class="weight-bold-text">
+       【必須】旅先名
+      </div>
+      <%= f.text_field :title, placeholder: "（記入例）富士山" %>
+
+      <div class="weight-bold-text">
+       【任意】自由記入欄
+      </div>
+      <%= f.text_area :text, placeholder: "感想などをご記入ください", rows: "8" %>
+
+      <div class="weight-bold-text mb-2">
+       【必須】都道府県
+      </div>
+      <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"erea-category"}) %>
+
+      <div class="weight-bold-text mt-5">
+       【必須】評価
+      </div>
+      <div class="rating-box mt-3">
+        <div class="main-rating">
+          <div class="ratings mb-3">
+            <span class="fa fa-star-o" id="star"></span>
+            <span class="fa fa-star-o" id="star"></span>
+            <span class="fa fa-star-o" id="star"></span>
+            <span class="fa fa-star-o" id="star"></span>
+            <span class="fa fa-star-o" id="star"></span>
+          </div>
+          <div class="ml-3 rating-value-display"><span id="rating-value-display">0</span>/5</div>
+        </div>
+        <%= f.hidden_field :score, id: "rating-value" %>
+      </div>
+      <%= f.submit "SEND" %>
+    <% end %>

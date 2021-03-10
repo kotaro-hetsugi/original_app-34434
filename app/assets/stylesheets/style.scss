@@ -1050,7 +1050,7 @@ footer p {
 
 .search-form {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .search-form .search-input {
@@ -1063,7 +1063,7 @@ footer p {
 }
 
 .select-box {
-  width: 5%;
+  width: 150px;
   height: 35px;
 }
 
@@ -1111,4 +1111,23 @@ footer p {
 
 .header-space {
   height: 100px;
+}
+
+.weight-bold-text{
+  font-weight: bolder;
+  margin-top: 5px;
+}
+
+.rating-box .ratings .fa{
+  font-size: 30px;
+  color:#ffcc00;
+  cursor: pointer;
+}
+
+.main-rating {
+  display: flex;
+}
+
+.rating-value-display {
+  font-size: 20px;
 }
