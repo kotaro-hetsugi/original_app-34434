@@ -1,0 +1,65 @@
+<div class="contents row">
+  <div class="content_post">
+  <%= image_tag 'sample.jpg', class: "item-img" %>
+    <%#<% if user_signed_in? && current_user.id == @post.user_id %>
+    <div class="more">
+      <span><%= image_tag 'arrow_top.png' %></span>
+      <ul class="more_list">
+        <li>
+          <%= link_to '編集', "#", method: :get %>
+        </li>
+        <li>
+          <%= link_to '削除', "#", method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <%#<% end %>    
+  </div>
+  <div class="show-content">
+    <div class="show-content-top">
+      <p><%= "（都道府県）" %></p>
+      <span class="name has-text-right">
+        <a href="#">
+        <p>投稿者</p><%= "(ニックネーム)" %>
+        </a>
+      </span>
+    </div>
+
+    <div class="show-content-center">
+      <div class="travel-title"><%= "(旅先名)" %></div>
+      <div class="star-rating mb-2">
+        <div class="star-rating-front" style="width: <%= "#" %>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="show-content-bottom">
+      <div class="content-text">
+      <% 10.times do %>
+        <%= "１０文字１０文字１０" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with( local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <%#<% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to "コメントユーザーネーム", "#" %>：</strong>
+          <%= "コメント文" %>
+        </p>
+      <%#<% end %>
+    </div>
+  </div>
+  
+</div>
