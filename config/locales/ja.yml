@@ -4,5 +4,8 @@ ja:
      user:
        nickname: ニックネーム
      post:
-       text: テキスト
+       title: 旅先名
+       text: 自由記入欄
        image: 画像
+       area_id: 都道府県
+       score: 評価

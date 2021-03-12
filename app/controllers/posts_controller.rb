@@ -8,6 +8,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
+    unless @post.save
+      @post
+      render :new
+    end
   end
 
   def show
