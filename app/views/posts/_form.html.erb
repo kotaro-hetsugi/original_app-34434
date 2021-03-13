@@ -1,5 +1,5 @@
-    <%= form_with(model: post, local: true) do |f| %>
-      <%= render partial:'shared/error_messages', model: f.object ,locals: { model: post }%>
+    <%= form_with(model: @post, local: true) do |f| %>
+      <%= render partial:'shared/error_messages', model: f.object ,locals: { model: @post }%>
       <div class="weight-bold-text">
        【必須】投稿画像
       </div>
@@ -18,7 +18,7 @@
       <div class="weight-bold-text mb-2">
        【必須】都道府県
       </div>
-      <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"erea-category"}) %>
+      <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"erea-category"}) %>
 
       <div class="weight-bold-text mt-5">
        【必須】評価

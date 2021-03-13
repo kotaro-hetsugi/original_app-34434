@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
   end
 
@@ -8,6 +9,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(post_params)
+    unless @post.save
+      @post
+      render :new
+    end
   end
 
   def show
@@ -19,6 +25,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:image, :title, :text, :area_id).merge(user_id: current_user.id)
   end
 
 end
