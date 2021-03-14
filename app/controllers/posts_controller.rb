@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  before_action :move_to_index, only: [:edit, :update]
 
   def index
     @posts = Post.includes(:user).order('created_at desc')
@@ -40,6 +41,13 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:image, :title, :text, :area_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    @post = Post.find(params[:id])
+    if @post.user_id != current_user.id
+      redirect_to root_path
+    end
   end
 
 end
