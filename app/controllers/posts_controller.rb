@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :set_post, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:edit, :update]
 
   def index
@@ -19,15 +20,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     unless @post.update(post_params)
       @post
       render :edit
@@ -43,8 +41,11 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image, :title, :text, :area_id).merge(user_id: current_user.id)
   end
 
-  def move_to_index
+  def set_post
     @post = Post.find(params[:id])
+  end
+
+  def move_to_index
     if @post.user_id != current_user.id
       redirect_to root_path
     end
