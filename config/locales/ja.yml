@@ -9,3 +9,7 @@ ja:
        image: 画像
        area_id: 都道府県
        score: 評価
+ time:
+   formats:
+     default: "%Y/%m/%d %H:%M:%S"
+     date: "%Y/%m/%d"

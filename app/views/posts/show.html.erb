@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="content_post">
-  <%= image_tag 'sample.jpg', class: "item-img" %>
-    <%#<% if user_signed_in? && current_user.id == @post.user_id %>
+  <%= image_tag @post.image, class: "item-img" %>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
     <div class="more">
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
@@ -9,24 +9,24 @@
           <%= link_to '編集', edit_post_path(@post.id), method: :get %>
         </li>
         <li>
-          <%= link_to '削除', "#", method: :delete, data: { confirm: '削除しますか？' }%>
+          <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: '削除しますか？' }%>
         </li>
       </ul>
     </div>
-    <%#<% end %>    
+    <% end %>    
   </div>
   <div class="show-content">
     <div class="show-content-top">
-      <p><%= "（都道府県）" %></p>
+      <p><%= @post.area.name %></p>
       <span class="name has-text-right">
         <a href="#">
-        <p>投稿者</p><%= "(ニックネーム)" %>
+        <p>投稿者</p><%= @post.user.nickname %>
         </a>
       </span>
     </div>
 
     <div class="show-content-center">
-      <div class="travel-title"><%= "(旅先名)" %></div>
+      <div class="travel-title"><%= @post.title %></div>
       <div class="star-rating mb-2">
         <div class="star-rating-front" style="width: <%= "#" %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
@@ -35,12 +35,11 @@
 
     <div class="show-content-bottom">
       <div class="content-text">
-      <% 10.times do %>
-        <%= "１０文字１０文字１０" %>
-        <% end %>
+        <%= safe_join(@post.text.split("\n"), tag.br) %>
       </div>
       <div class="content-date has-text-right">
-        <%= "投稿日：2021/*/*" %>
+        <span>投稿日:</span>
+        <%= l @post.created_at, format: :date %>
       </div>
     </div>
   </div>
