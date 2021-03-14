@@ -5,17 +5,17 @@
 <% end %>
 <div class="contents row">
   <%# 投稿の表示 %>
-  <% 10.times do %> <%#  後で変える %>
+  <% @posts.each do |post| %> <%#  後で変える %>
     <%= link_to "#" do %>
     <div class="content_post" >
-    <%= image_tag 'sample.jpg', class: "item-img" %>
-      <p><%= "(都道府県名)" %></p>
+    <%= image_tag post.image, class: "item-img" %>
+      <p><%= post.area.name %></p>
       <span class="name">
-          <span>投稿者</span><%= "(ユーザー名)" %>
+          <span>投稿者</span><%= post.user.nickname %>
       </span>
     </div>
     <div class="content-bottom">
-      <div class="travel-title"><%= "(旅先名)" %></div>
+      <div class="travel-title"><%= post.title %></div>
       <div class="star-rating mb-2">
         <div class="star-rating-front" style="width: <%= "#" %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
