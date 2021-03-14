@@ -1076,6 +1076,7 @@ footer p {
   width: 100%;
   height: 100%;
   z-index: 2;
+  border: #5d627b 0.5px solid;
 }
 
 .content-bottom {
@@ -1090,8 +1091,6 @@ footer p {
   padding: 20px;
   margin-bottom: 40px;
   background-color: white;
-  // box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  // border: double black 15px;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
