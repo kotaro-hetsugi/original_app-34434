@@ -35,7 +35,8 @@
 
     <div class="show-content-bottom">
       <div class="content-text">
-        <%= @post.text %>
+        <%= safe_join(@post.text.split("\n"), tag.br) %>
+        <%#= @post.text %>
       </div>
       <div class="content-date has-text-right">
         <%= l @post.created_at, format: :date %>
