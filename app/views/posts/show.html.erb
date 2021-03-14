@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="content_post">
   <%= image_tag @post.image, class: "item-img" %>
-    <% if current_user.id == @post.user_id %>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
     <div class="more">
       <span><%= image_tag 'arrow_top.png' %></span>
       <ul class="more_list">
