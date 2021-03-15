@@ -1119,10 +1119,8 @@ footer p {
 
 .star-rating {
   position: relative;
-  width: 5em;
   height: 1em;
   font-size: 35px;
-  margin-right: 25px;
 }
 .star-rating-front {
   position: absolute;
@@ -1132,6 +1130,7 @@ footer p {
   color: #ffcc33;
 }
 .star-rating-back {
+  width: 100%;
   color: #ccc;
 }
 
