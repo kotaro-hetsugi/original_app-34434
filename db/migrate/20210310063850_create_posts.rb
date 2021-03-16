@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.text       :text
       t.integer    :area_id, null: false
       t.integer    :score,   null: false
-      t.references :user
+      t.references :user,    foreign_key: true
 
 
       t.timestamps

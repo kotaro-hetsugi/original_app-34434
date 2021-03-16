@@ -46,21 +46,21 @@
 
   <div class="container">
     <% if user_signed_in? %>
-      <%= form_with( local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+      <%= form_with(model: @comment,url: post_comments_path(@post.id), local: true) do |f| %>
+        <%= f.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= f.submit "SEND" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
-      <%#<% @comments.each do |comment| %>
-        <p>
-          <strong><%= link_to "コメントユーザーネーム", "#" %>：</strong>
-          <%= "コメント文" %>
-        </p>
-      <%#<% end %>
+      <% @comments.each do |comment| %>
+        <p><strong><u><%= link_to comment.user.nickname, "#" %></u></strong></p>
+        <div class="ml-5 mt-1 mb-1">
+          <%= safe_join(comment.text.split("\n"), tag.br) %>
+        </div>
+      <% end %>
     </div>
   </div>
   
