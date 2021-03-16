@@ -38,8 +38,5 @@ RSpec.describe Post, type: :model do
         expect(@post.errors.full_messages).to include('評価を入力してください')
       end
     end
-
-
   end
-
 end
