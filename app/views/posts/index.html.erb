@@ -16,7 +16,7 @@
     <div class="content-bottom">
       <div class="travel-title"><%= post.title %></div>
       <div class="star-rating mb-2">
-        <div class="star-rating-front" style="width: <%= "#" %>%">★★★★★</div>
+        <div class="star-rating-front" style="width: <%= post.score*100/5 %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
       </div>
     </div>
