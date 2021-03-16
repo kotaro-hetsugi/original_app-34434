@@ -55,12 +55,12 @@
     <% end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
-      <%#<% @comments.each do |comment| %>
-        <p>
-          <strong><%= link_to "コメントユーザーネーム", "#" %>：</strong>
-          <%= "コメント文" %>
-        </p>
-      <%#<% end %>
+      <% @comments.each do |comment| %>
+        <p><strong><u><%= link_to comment.user.nickname, "#" %></u></strong></p>
+        <div class="ml-5 mt-1 mb-1">
+          <%= safe_join(comment.text.split("\n"), tag.br) %>
+        </div>
+      <% end %>
     </div>
   </div>
   
