@@ -742,7 +742,7 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 header.header {
   padding: 10px;
   border-bottom: 1px solid #D8D8D8;
-  background-color: rgba(225, 239, 241, 0.87);
+  background-color: rgb(225, 239, 241);
   position: fixed;
   top: 0;
   left: 0;
@@ -1076,6 +1076,7 @@ footer p {
   width: 100%;
   height: 100%;
   z-index: 2;
+  border: #5d627b 0.5px solid;
 }
 
 .content-bottom {
@@ -1090,8 +1091,6 @@ footer p {
   padding: 20px;
   margin-bottom: 40px;
   background-color: white;
-  // box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  // border: double black 15px;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
@@ -1120,10 +1119,8 @@ footer p {
 
 .star-rating {
   position: relative;
-  width: 5em;
   height: 1em;
   font-size: 35px;
-  margin-right: 25px;
 }
 .star-rating-front {
   position: absolute;
@@ -1133,6 +1130,7 @@ footer p {
   color: #ffcc33;
 }
 .star-rating-back {
+  width: 100%;
   color: #ccc;
 }
 

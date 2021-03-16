@@ -32,11 +32,11 @@ RSpec.describe Post, type: :model do
         @post.valid?
         expect(@post.errors.full_messages).to include('都道府県を選択してください')
       end
-      # it 'scoreが0では投稿できない' do
-      # end
+      it 'scoreが空では投稿できない' do
+        @post.score = ''
+        @post.valid?
+        expect(@post.errors.full_messages).to include('評価を入力してください')
+      end
     end
-
-
   end
-
 end

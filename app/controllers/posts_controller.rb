@@ -13,9 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    unless @post.save
-      render :new
-    end
+    render :new unless @post.save
   end
 
   def show
@@ -25,9 +23,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    unless @post.update(post_params)
-      render :edit
-    end
+    render :edit unless @post.update(post_params)
   end
 
   def destroy
@@ -37,7 +33,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :title, :text, :area_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :title, :text, :area_id, :score).merge(user_id: current_user.id)
   end
 
   def set_post
@@ -45,9 +41,6 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    if @post.user_id != current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path if @post.user_id != current_user.id
   end
-
 end

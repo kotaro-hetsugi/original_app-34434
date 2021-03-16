@@ -3,7 +3,7 @@ FactoryBot.define do
     title   { Faker::Lorem.sentence }
     text    { Faker::Lorem.sentence }
     area_id { 2 }
-    # score   { 5 }
+    score   { 5 }
     association :user
 
     after(:build) do |post|

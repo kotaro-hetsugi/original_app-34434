@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_092807) do
     t.string "title", default: "", null: false
     t.text "text"
     t.integer "area_id", null: false
+    t.integer "score", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
