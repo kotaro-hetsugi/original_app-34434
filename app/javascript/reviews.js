@@ -14,10 +14,10 @@ window.addEventListener('load', () => {
 	// 	}
 	// })
 	
-	for(let i=0; i<stars.length; i++){                       // stars.lengthの値（5回）繰り返し
-		stars[i].addEventListener("mouseover",function(){      // 星にカーソルが乗ったときに実行する関数を定義
+	for(let i=0; i<stars.length; i++){                       // stars.lengthの値（最大5回）繰り返し
+		stars[i].addEventListener("mouseover",function(){      // 星にカーソルが乗ったときに実行する関数を定義。[i]はカーソルが乗ったときの星配列の添字。
 			for(let j=0; j<stars.length; j++){                   // 星カーソルが乗った時、5回繰り返される
-				stars[j].classList.remove("fa-star");              // 全て星を取り除く（星が塗り潰されていることを想定）
+				stars[j].classList.remove("fa-star");              // 全て星を取り除く（星が塗り潰されている場合を想定）
 				stars[j].classList.add("fa-star-o");               // くり抜かれた星のクラスを付与
 			}
 			for(let j=0; j<=i; j++){                             // 星の数だけ以下の関数が繰り返される
@@ -33,8 +33,8 @@ window.addEventListener('load', () => {
 		})
 		
 		stars[i].addEventListener("mouseout",function(){       // 星からカーソルが離れたときに実行される関数
-			for(let j=0; j<stars.length; j++){                   // まず5回繰り返す
-				stars[j].classList.remove("fa-star");              // まず全ての星をくり抜く
+			for(let j=0; j<stars.length; j++){                   // 5回繰り返す
+				stars[j].classList.remove("fa-star");              // 全ての星をくり抜く
 				stars[j].classList.add("fa-star-o");
 			}
 			for(let j=0; j<=index; j++){                         // クリックされている星まで塗りつぶす
