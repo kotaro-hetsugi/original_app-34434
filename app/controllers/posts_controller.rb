@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.serch(params[:keyword])
+    @posts = Post.search(params[:keyword])
   end
   private
 

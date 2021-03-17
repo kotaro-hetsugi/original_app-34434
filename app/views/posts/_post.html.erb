@@ -1,16 +1,16 @@
-<%= link_to "#" do %>
+<%= link_to post_path(post.id) do %>
     <div class="content_post" >
-    <%= image_tag 'sample.jpg', class: "item-img" %>
-      <p><%= "(都道府県名)" %></p>
+    <%= image_tag post.image, class: "item-img" %>
+      <p><%= post.area.name %></p>
       <span class="name">
-          <span>投稿者</span><%= "(ユーザー名)" %>
+          <span>投稿者</span><%= post.user.nickname %>
       </span>
     </div>
     <div class="content-bottom">
-      <div class="travel-title"><%= "(旅先名)" %></div>
+      <div class="travel-title"><%= post.title %></div>
       <div class="star-rating mb-2">
-        <div class="star-rating-front" style="width: <%= "#" %>%">★★★★★</div>
+        <div class="star-rating-front" style="width: <%= post.score*100/5 %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
       </div>
     </div>
-    <% end %>
+<% end %>
