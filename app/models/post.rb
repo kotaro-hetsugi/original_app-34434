@@ -11,6 +11,14 @@ class Post < ApplicationRecord
 
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
 
+  def self.search(search)
+    if search != ''
+      Post.where('title LIKE(?)', "%#{search}%")
+    else
+      Post.includes(:user).order('created_at desc')
+    end
+  end
+
   belongs_to :user
   has_many :comments
   has_one_attached :image
