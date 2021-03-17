@@ -32,6 +32,9 @@ class PostsController < ApplicationController
     @post.destroy
   end
 
+  def search
+    @posts = Post.serch(params[:keyword])
+  end
   private
 
   def post_params
