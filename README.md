@@ -50,11 +50,14 @@ https://travellers-34434.herokuapp.com/
 # 実装機能
 ## ユーザー管理機能
 
-## 一覧表示機能
-<img width="1369" alt="スクリーンショット 2021-04-02 10 34 53" src="https://user-images.githubusercontent.com/78333577/113394315-f6ebdd00-93d2-11eb-8a6d-36f86985ebe5.png">
+## 一覧表示機能（トップページ）
+![94cddd0feb6235538e40a40e10300541](https://user-images.githubusercontent.com/78333577/113398645-e5f29a00-93d9-11eb-8229-09e30429eb03.gif)
 
 ## 投稿機能
 ## 投稿編集機能
+## 投稿削除機能
+## コメント機能
+## 検索機能
 
 
 # 実装予定の機能
