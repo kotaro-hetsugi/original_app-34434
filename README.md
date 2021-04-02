@@ -48,11 +48,15 @@ https://travellers-34434.herokuapp.com/
 
 
 # 実装機能
-## ユーザー管理機能
-
 ## 一覧表示機能（トップページ）
 ![94cddd0feb6235538e40a40e10300541](https://user-images.githubusercontent.com/78333577/113398645-e5f29a00-93d9-11eb-8229-09e30429eb03.gif)
-
+## ユーザー管理機能
+### 新規登録
+![15b32b5f505abb0ef22516026a9e3fbf](https://user-images.githubusercontent.com/78333577/113399164-b5f7c680-93da-11eb-9c93-4b9bc0eb1260.gif)
+### ログイン
+![d2b079b81179c6d87bbaa6d98e594f7b](https://user-images.githubusercontent.com/78333577/113400324-92358000-93dc-11eb-8fbf-24817a8d4ba2.gif)
+### ログアウト
+![aede1ea6ca1e7017202a2c6c9aeeb176](https://user-images.githubusercontent.com/78333577/113400451-c90b9600-93dc-11eb-9b7a-2928f81c33c0.gif)
 ## 投稿機能
 ## 投稿編集機能
 ## 投稿削除機能
