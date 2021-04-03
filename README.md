@@ -47,20 +47,19 @@
 ## 4-3.詳細表示
 ![2bec50278354df2c0e5c9debef00b3fe](https://user-images.githubusercontent.com/78333577/113465210-3e26ac00-946d-11eb-8a32-57278040f59d.gif)
 ### 4-3-1.投稿編集
-
-### 4-3-2.投稿削除
 ![8a7fde6c55601d7eee7218b2a32e9d04](https://user-images.githubusercontent.com/78333577/113465251-8e057300-946d-11eb-885a-8af04206cf90.gif)
+### 4-3-2.投稿削除
+![703247c2a41db01cdaaf7d913648edf1](https://user-images.githubusercontent.com/78333577/113466289-906bcb00-9475-11eb-8d77-ff8c9ef22bcb.gif)
 ### 4-3-3.コメント
 ![18a2840b6b7966eedeab07978eed3744](https://user-images.githubusercontent.com/78333577/113465319-0ff59c00-946e-11eb-8bdd-8d41e787605d.gif)
 ## 4-4.検索機能
-
+![b5f6310b6da1e949d1da7e016706b18a](https://user-images.githubusercontent.com/78333577/113466407-80082000-9476-11eb-8d14-7f6cb8ce3e09.gif)
 
 # 実装予定の機能
 
 
 # テーブル設計
-（ER図貼り付け方法が不明）
-
+[![Image from Gyazo](https://i.gyazo.com/60009e1a2c1f3646812260d47bd49273.png)](https://gyazo.com/60009e1a2c1f3646812260d47bd49273)
 
 ## users テーブル
 
