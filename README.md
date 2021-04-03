@@ -9,19 +9,32 @@
   ## 1-1.アプリケーション名
   Travellers
   ## 1-2.概要説明
-  自分が実際に行った旅先を投稿形式でレビューできるアプリです。  
-  ユーザーを登録すると投稿できるようになります。  
-  自身の投稿に対しては、編集と削除をすることができます。  
-  他のユーザーの投稿に対してはコメントのみできます。  
+  自分が実際に行った旅先を投稿形式でレビューできるアプリです。<br>
+  ユーザーを登録すると投稿できるようになります。<br>
+  自身の投稿に対しては、編集と削除をすることができます。<br>
+  他のユーザーの投稿に対してはコメントのみできます。<br>
 
 # 2.制作背景
-  旅先をwebページで探すとき、mapアプリや観光連盟公式サイト等を見ることがある。
-  その際に、おすすめや口コミを参照することがあるが、評価や意見をどのような人が記載しているのかわからない。
-  また、実際に行った人がどのような評価、感想を持っているのかわからない。
+  ## 2-1.現状
+    旅行先をweb上で探す時、
+  - MAPアプリ
+  - 旅行サイト
+  - 公式観光連盟サイト etc・・・
 
-  そこで実際に行った人が投稿した評価のみに絞った、webページを作成をすることにした。
+    これらのサイトはとても便利である反面、以下の課題がある
+  - 評価や口コミがどのような人の意見なのかわからない
+   （実際に行った人の意見のみで絞ることができない）
+  - 有名な観光名所が上位に表示されやすい
+
+  全体的に見ると<b>評価や検索順位がフェアじゃない</b>ということがあります。
+  そこで解決策として実際に行ったことがある人の評価のみに絞ったアプリケーションを制作しました。
 
   実際に行った人のみが投稿できるようにするため、写真投稿を必須としました。
+
+  ## 2-2.目的
+  - 実際に旅行をした人が投稿（旅行した人が主役）
+  - 評価を投稿できる（星５形式）
+
 
 # 3.接続方法
   ## 3-1.URL
@@ -29,31 +42,36 @@
 
   ## 3-2.テスト用アカウント
   テストID：test1@test1<br>
-  テストPASS：xxx111111
+  テストPASS：xxx111111<br>
+
+  ## 3-3.接続補足
+  - WebブラウザGoogle Chromeの最新版を利用してアクセスしてください。<br>
+    ただしデプロイ等で接続できないタイミングもございます。その際は少し時間をおいてから接続してください。<br>
+  - 同時に複数の方がログインしている場合に、ログインできない可能性があります。<br>
 
 
 # 4.実装機能
-## 4-1.一覧表示機能（トップページ）
-![94cddd0feb6235538e40a40e10300541](https://user-images.githubusercontent.com/78333577/113398645-e5f29a00-93d9-11eb-8229-09e30429eb03.gif)
-## 4-2.ユーザー管理機能
-### 4-2-1.新規登録
-![15b32b5f505abb0ef22516026a9e3fbf](https://user-images.githubusercontent.com/78333577/113399164-b5f7c680-93da-11eb-9c93-4b9bc0eb1260.gif)
-### 4-2-2.ログイン
-![d2b079b81179c6d87bbaa6d98e594f7b](https://user-images.githubusercontent.com/78333577/113400324-92358000-93dc-11eb-8fbf-24817a8d4ba2.gif)
-### 4-2-3.ログアウト
-![aede1ea6ca1e7017202a2c6c9aeeb176](https://user-images.githubusercontent.com/78333577/113400451-c90b9600-93dc-11eb-9b7a-2928f81c33c0.gif)
-## 4-3.投稿機能
-![6590289308f9698afef8a630ee0b2a69](https://user-images.githubusercontent.com/78333577/113465111-85606d00-946c-11eb-8af8-f03b1329f533.gif)
-## 4-3.詳細表示
-![2bec50278354df2c0e5c9debef00b3fe](https://user-images.githubusercontent.com/78333577/113465210-3e26ac00-946d-11eb-8a32-57278040f59d.gif)
-### 4-3-1.投稿編集
-![8a7fde6c55601d7eee7218b2a32e9d04](https://user-images.githubusercontent.com/78333577/113465251-8e057300-946d-11eb-885a-8af04206cf90.gif)
-### 4-3-2.投稿削除
-![703247c2a41db01cdaaf7d913648edf1](https://user-images.githubusercontent.com/78333577/113466289-906bcb00-9475-11eb-8d77-ff8c9ef22bcb.gif)
-### 4-3-3.コメント
-![18a2840b6b7966eedeab07978eed3744](https://user-images.githubusercontent.com/78333577/113465319-0ff59c00-946e-11eb-8bdd-8d41e787605d.gif)
-## 4-4.検索機能
-![b5f6310b6da1e949d1da7e016706b18a](https://user-images.githubusercontent.com/78333577/113466407-80082000-9476-11eb-8d14-7f6cb8ce3e09.gif)
+  ## 4-1.一覧表示機能（トップページ）
+  ![94cddd0feb6235538e40a40e10300541](https://user-images.githubusercontent.com/78333577/113398645-e5f29a00-93d9-11eb-8229-09e30429eb03.gif)
+  ## 4-2.ユーザー管理機能
+   ### 4-2-1.新規登録
+   ![15b32b5f505abb0ef22516026a9e3fbf](https://user-images.githubusercontent.com/78333577/113399164-b5f7c680-93da-11eb-9c93-4b9bc0eb1260.gif)
+   ### 4-2-2.ログイン
+   ![d2b079b81179c6d87bbaa6d98e594f7b](https://user-images.githubusercontent.com/78333577/113400324-92358000-93dc-11eb-8fbf-24817a8d4ba2.gif)
+   ### 4-2-3.ログアウト
+   ![aede1ea6ca1e7017202a2c6c9aeeb176](https://user-images.githubusercontent.com/78333577/113400451-c90b9600-93dc-11eb-9b7a-2928f81c33c0.gif)
+  ## 4-3.投稿機能
+  ![6590289308f9698afef8a630ee0b2a69](https://user-images.githubusercontent.com/78333577/113465111-85606d00-946c-11eb-8af8-f03b1329f533.gif)
+  ## 4-3.詳細表示
+  ![2bec50278354df2c0e5c9debef00b3fe](https://user-images.githubusercontent.com/78333577/113465210-3e26ac00-946d-11eb-8a32-57278040f59d.gif)
+   ### 4-3-1.投稿編集
+   ![8a7fde6c55601d7eee7218b2a32e9d04](https://user-images.githubusercontent.com/78333577/113465251-8e057300-946d-11eb-885a-8af04206cf90.gif)
+   ### 4-3-2.投稿削除
+   ![703247c2a41db01cdaaf7d913648edf1](https://user-images.githubusercontent.com/78333577/113466289-906bcb00-9475-11eb-8d77-ff8c9ef22bcb.gif)
+   ### 4-3-3.コメント
+  ![18a2840b6b7966eedeab07978eed3744](https://user-images.githubusercontent.com/78333577/113465319-0ff59c00-946e-11eb-8bdd-8d41e787605d.gif)
+  ## 4-4.検索機能
+  ![b5f6310b6da1e949d1da7e016706b18a](https://user-images.githubusercontent.com/78333577/113466407-80082000-9476-11eb-8d14-7f6cb8ce3e09.gif)
 
 # 実装予定の機能
 
