@@ -37,7 +37,6 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params)
-    # @results = @p.result.includes(:area_id)
   end
 
   private
