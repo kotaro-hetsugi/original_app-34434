@@ -12,10 +12,10 @@ class Post < ApplicationRecord
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
 
   def self.search(search)
-    if search != ''
-      Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search}%", "%#{search}%"])
+    if search[:area_id] == "1" && search[:keyword] != ""
+      Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%", "%#{search[:keyword]}%"])
     else
-      Post.includes(:user).order('created_at desc')
+      Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%", "%#{search[:keyword]}%"]).where(area_id: search[:area_id])
     end
   end
 
