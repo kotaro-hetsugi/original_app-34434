@@ -1050,19 +1050,19 @@ footer p {
   text-align: center;
 }
 
-.search-form {
+/* .search-form {
   text-align: center;
   padding-top: 0px;
-}
+} */
 
-.search-form .search-input {
+/* .search-form .search-input {
   width: 30%;
   margin-right: 10px;
-}
+} */
 
-.search-form .search-btn {
+/* .search-form .search-btn {
   width: 6%;
-}
+} */
 
 .select-box {
   width: 150px;
@@ -1072,6 +1072,36 @@ footer p {
 .contents-header{
   font-size: 20px;
   text-align: center;
+}
+
+.search-form{
+  position: fixed;
+  width: 28%;
+  font-size: 15px;
+  /* position: absolute; */
+  right: -40px;  
+}
+
+.search-input{
+  width: 45%;
+}
+
+.search-btn{
+  width: 70px;
+}
+
+.search-result{
+  background-color: white;
+  margin-left: 95px;
+  margin-top: -13px;
+  width: 45%;
+}
+
+.search-result-child{
+  border-bottom:#666 1px solid;
+  height: 40px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .search-error{

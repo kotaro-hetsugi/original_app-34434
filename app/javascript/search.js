@@ -24,14 +24,14 @@ if (location.pathname.match("/")||location.pathname.match("/posts/search")){    
 
           result.forEach((t) => {                               // 検索結果の分だけ繰り返し
             const childElement = document.createElement("div"); // 検索結果の表示要素生成
-            childElement.setAttribute("class", "child");        // class指定
+            childElement.setAttribute("class", "search-result-child");        // class指定
             childElement.setAttribute("id", t.id);              // id指定
             childElement.innerHTML = t.title;                   // 文字列操作 tagのnameを表示
             searchResult.appendChild(childElement);             // 空のdiv要素にjsで生成したdiv要素を子要素として追加
             
             const clickElement = document.getElementById(t.id); // クリック要素として検索生成要素取得
             clickElement.addEventListener("click", () => {      // クリック時に発火
-              document.getElementById("keyword").value = clickElement.textContent; // 入力欄にクリック要素を代入
+              document.getElementById("search-input").value = clickElement.textContent; // 入力欄にクリック要素を代入
               searchResult.innerHTML = ""    // 全検索要素削除（中身を空にすることで削除）
             });
           });

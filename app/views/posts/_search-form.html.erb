@@ -1,15 +1,9 @@
 <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |f| %>
-  <div>
-    <%= "都道府県:" %>
-    <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box"}) %>
+  <%= f.label :name, "都道府県"%>
+  <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box"}) %><br>
+  <%= f.label :name, "キーワード"%>
+  <%= f.text_field :keyword,placeholder: "投稿を検索する", class:"search-input",id: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
+  <div class="search-result", id="search-result">
   </div>
-  <div>
-    <%= "キーワード:" %>
-    <%= f.text_field :keyword,placeholder: "投稿を検索する", class: "search-input", id: "search-input" %>
-    <div id="search-result">
-    </div>
-  </div>
-  <span>
-    <%= f.submit "検索", class: "search-btn" %>
-  </span>
 <% end %>
