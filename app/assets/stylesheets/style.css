@@ -1050,20 +1050,6 @@ footer p {
   text-align: center;
 }
 
-/* .search-form {
-  text-align: center;
-  padding-top: 0px;
-} */
-
-/* .search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-} */
-
-/* .search-form .search-btn {
-  width: 6%;
-} */
-
 .select-box {
   width: 150px;
   height: 35px;
@@ -1072,13 +1058,13 @@ footer p {
 .contents-header{
   font-size: 20px;
   text-align: center;
+  text-underline-position: under;
 }
 
 .search-form{
   position: fixed;
   width: 28%;
   font-size: 15px;
-  /* position: absolute; */
   right: -40px;  
 }
 
