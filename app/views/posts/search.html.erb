@@ -1,9 +1,32 @@
-<%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |f| %>
-  <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= f.submit "検索", class: "search-btn" %>
-<% end %>
+<%= render partial: "search-form" %>
+
+<div class="contents-header">
+  <u>＜検索結果＞</u>
+  <% if params[:area_id] != "1" %>
+    <div>
+      都道府県:
+      <% @posts.each do |post| %>
+        <%= post.area.name %>
+        <% break %>
+      <% end %>
+    </div>
+  <% end %>
+  <% if params[:keyword] != "" %>
+    <div>
+      キーワード:<%= params[:keyword] %>
+    </div>
+  <% end %>
+</div>
+
+
 <div class="contents row">
-  <% @posts.each do |post| %>
-    <%= render partial: "post", locals: { post: post } %>
+  <% if @posts.present? %>
+    <% @posts.each do |post| %>
+      <%= render partial: "post", locals: { post: post } %>
+    <% end %>
+  <% else %>
+    <div class="search-error">
+      ⚠該当する検索結果はありません⚠
+    </div>
   <% end %>
 </div>

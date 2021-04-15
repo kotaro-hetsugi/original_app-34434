@@ -33,8 +33,15 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.search(params)
   end
+
+  def search_candidate
+    return nil if params[:keyword] == ""
+    title = Post.where(['title LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: title }
+  end
+
   private
 
   def post_params
@@ -48,4 +55,5 @@ class PostsController < ApplicationController
   def move_to_index
     redirect_to root_path if @post.user_id != current_user.id
   end
+
 end

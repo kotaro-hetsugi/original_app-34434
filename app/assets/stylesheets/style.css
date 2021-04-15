@@ -1050,23 +1050,51 @@ footer p {
   text-align: center;
 }
 
-.search-form {
-  text-align: center;
-  padding-top: 0px;
-}
-
-.search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-form .search-btn {
-  width: 6%;
-}
-
 .select-box {
   width: 150px;
   height: 35px;
+}
+
+.contents-header{
+  font-size: 20px;
+  text-align: center;
+  text-underline-position: under;
+}
+
+.search-form{
+  position: fixed;
+  width: 28%;
+  font-size: 15px;
+  right: -40px;  
+}
+
+.search-input{
+  width: 45%;
+}
+
+.search-btn{
+  width: 70px;
+}
+
+.search-result{
+  background-color: white;
+  margin-left: 95px;
+  margin-top: -13px;
+  width: 45%;
+}
+
+.search-result-child{
+  border-bottom:#666 1px solid;
+  height: 40px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.search-error{
+  text-align: center;
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
 }
 
 .item-img {
