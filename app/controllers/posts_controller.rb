@@ -2,12 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
-  # before_action :search_product, only: [:index, :search]
 
   def index
     @posts = Post.includes(:user).order('created_at desc')
-    # set_post_column
-    # set_area_column
   end
 
   def new
@@ -39,6 +36,12 @@ class PostsController < ApplicationController
     @posts = Post.search(params)
   end
 
+  def search_candidate
+    return nil if params[:keyword] == ""
+    title = Post.where(['title LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: title }
+  end
+
   private
 
   def post_params
@@ -53,15 +56,4 @@ class PostsController < ApplicationController
     redirect_to root_path if @post.user_id != current_user.id
   end
 
-  # def search_product
-  #   @p = Post.ransack(params[:q])
-  # end
-
-  # def set_post_column
-  #   @post_area = Post.select("area_id").distinct
-  # end
-
-  # def set_area_column
-  #   @area_name = Area.select(:name).distinct
-  # end
 end
