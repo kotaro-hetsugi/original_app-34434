@@ -155,9 +155,20 @@
    入力したコメントは、詳細表示画面から確認することができます。
 
   ## 5-5.検索機能
-  ![b5f6310b6da1e949d1da7e016706b18a](https://user-images.githubusercontent.com/78333577/113466407-80082000-9476-11eb-8d14-7f6cb8ce3e09.gif)
+  <!-- ![b5f6310b6da1e949d1da7e016706b18a](https://user-images.githubusercontent.com/78333577/113466407-80082000-9476-11eb-8d14-7f6cb8ce3e09.gif) -->
   投稿の検索ができます。<br>
-  検索欄にキーワードを入力後、『検索』ボタンを押すことで検索ができます。
+  検索機能では、以下のようなことができます。
+  <!-- 検索欄にキーワードを入力後、『検索』ボタンを押すことで検索ができます。 -->
+  ### 検索候補
+  ![6080464837baef9f674653e82d3b0834](https://user-images.githubusercontent.com/78333577/114970634-c10c2580-9eb5-11eb-83f4-0e784280c232.gif)
+  ### 都道府県検索
+  ![d8249588ecdd1f7b6f5309504dfdcfe7](https://user-images.githubusercontent.com/78333577/114970711-e7ca5c00-9eb5-11eb-955b-6713a8d04fa4.gif)
+  ### キーワード検索
+  ![b578fc2f3f40730a9ed8b6d71e024d33](https://user-images.githubusercontent.com/78333577/114970759-ffa1e000-9eb5-11eb-86da-a39712039a76.gif)
+  ### 都道府県&キーワード検索
+  ![2ea34e790c98f9aa0c6e9422738e3f81](https://user-images.githubusercontent.com/78333577/114970802-1b0ceb00-9eb6-11eb-94a9-24f1aa66bc65.gif)
+  ### 検索結果なし
+  ![ac706ec30dc194ee0a5099e6f0a673b7](https://user-images.githubusercontent.com/78333577/114970845-2fe97e80-9eb6-11eb-94be-2448ec7bff4b.gif)
 
 # 6.テーブル設計
 [![Image from Gyazo](https://i.gyazo.com/60009e1a2c1f3646812260d47bd49273.png)](https://gyazo.com/60009e1a2c1f3646812260d47bd49273)
