@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 
   def search
     @posts = Post.search(params)
+    @area = Area.find(params[:area_id])
   end
 
   def search_candidate
