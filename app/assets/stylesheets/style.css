@@ -1085,7 +1085,7 @@ footer p {
 
 .search-result-child{
   border-bottom:#666 1px solid;
-  height: 40px;
+  height: auto;
   padding-left: 10px;
   padding-top: 10px;
 }
