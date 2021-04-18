@@ -1,4 +1,7 @@
 <div class="contents row">
+  <div class="contents-header">
+    <u>＜投稿詳細＞</u>
+  </div>
   <div class="content_post">
   <%= image_tag @post.image, class: "item-img" %>
     <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -13,7 +16,7 @@
         </li>
       </ul>
     </div>
-    <% end %>    
+    <% end %>
   </div>
   <div class="show-content">
     <div class="show-content-top">
