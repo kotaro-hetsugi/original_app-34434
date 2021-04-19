@@ -1090,6 +1090,29 @@ footer p {
   padding-top: 10px;
 }
 
+.search-output{
+  position: fixed;
+  width: 23%;
+  font-size: 15px;
+  top: 400px;
+  right: 10px;
+  background-color: chartreuse;
+}
+
+.output-title{
+  font-size: 16px;
+}
+
+.average-score{
+  display: flex;
+}
+
+.average-score-display{
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
 .search-error{
   text-align: center;
   font-size: 20px;
