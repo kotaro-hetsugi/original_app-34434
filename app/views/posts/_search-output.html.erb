@@ -1,0 +1,61 @@
+<% if current_page?(root_path) %>
+  <div class="search-output">
+    <div class="contents-header">
+      <u>＜検索情報＞</u>
+    </div>
+    <div class="output-title">
+      都道府県:<%= "〇〇県" %><br>   <%# 表示分岐作成 %>
+      キーワード:<%= "〜〜〜〜〜" %>  <%# 表示分岐作成 %>
+    </div>
+    <div class="output-title mt-3">
+      検索件数:<%= "###" %>件<br>
+      平均評価
+    </div>
+    <div class="average-score">
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <%= 0 %>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★</div>
+      </div>
+      <div class="average-score-display">
+        <%= "#.##" %>点
+      </div>
+    </div>
+    <div class="output-title mt-3">
+      <strong>↑検索時に表示されます↑</strong>
+     </div>
+  </div>
+<% else %>
+    <div class="search-output">
+    <div class="contents-header">
+      <u>＜検索情報＞</u>
+    </div>
+    <div class="output-title">
+      都道府県:
+      <% if params[:area_id] != "1" %>
+        <%= @area.name %><br>
+      <% else%>
+        （指定なし）<br>
+      <% end %>
+      
+      キーワード:
+      <% if params[:keyword] != "" %>
+        <%= params[:keyword] %>
+      <%else%>
+        （入力なし）
+      <% end %>
+    </div>
+    <div class="output-title mt-3">
+      検索件数:<%= "###" %>件<br>
+      平均評価
+    </div>
+    <div class="average-score">
+      <div class="star-rating">
+        <div class="star-rating-front" style="width: <%= 0 %>%">★★★★★</div>
+        <div class="star-rating-back">★★★★★</div>
+      </div>
+      <div class="average-score-display">
+        <%= "#.##" %>点
+      </div>
+    </div>
+  </div>
+<% end %>
