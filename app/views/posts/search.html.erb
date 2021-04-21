@@ -2,16 +2,6 @@
 
 <div class="contents-header">
   <u>＜検索結果＞</u>
-  <% if params[:area_id] != "1" %>
-    <div>
-      都道府県:<%= @area.name %>
-    </div>
-  <% end %>
-  <% if params[:keyword] != "" %>
-    <div>
-      キーワード:<%= params[:keyword] %>
-    </div>
-  <% end %>
 </div>
 
 <%= render partial: "search-output" %>
