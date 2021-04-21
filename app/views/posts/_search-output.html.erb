@@ -1,11 +1,11 @@
-<% if current_page?(root_path) %>
+<% if current_page?(root_path) %>      <%# トップページの表示 %>
   <div class="search-output">
     <div class="contents-header">
       <u>＜検索情報＞</u>
     </div>
     <div class="output-title">
-      都道府県:<%= "〇〇県" %><br>   <%# 表示分岐作成 %>
-      キーワード:<%= "〜〜〜〜〜" %>  <%# 表示分岐作成 %>
+      都道府県:<%= "〇〇県" %><br>
+      キーワード:<%= "〜〜〜〜〜" %> 
     </div>
     <div class="output-title mt-3">
       検索件数:<%= "###" %>件<br>
@@ -13,7 +13,6 @@
     </div>
     <div class="average-score">
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <%= 0 %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
       </div>
       <div class="average-score-display">
@@ -24,7 +23,7 @@
       <strong>↑検索時に表示されます↑</strong>
      </div>
   </div>
-<% else %>
+<% else %>              <%# 検索時の表示 %>
     <div class="search-output">
     <div class="contents-header">
       <u>＜検索情報＞</u>
@@ -50,11 +49,17 @@
     </div>
     <div class="average-score">
       <div class="star-rating">
-        <div class="star-rating-front" style="width: <%= 0 %>%">★★★★★</div>
+        <% if @posts.present? %>
+          <div class="star-rating-front" style="width: <%= @posts.average(:score).round(2).to_f*100/5 %>%">★★★★★</div>
+        <% end %>
         <div class="star-rating-back">★★★★★</div>
       </div>
       <div class="average-score-display">
-        <%= "#.##" %>点
+        <% if @posts.present? %>
+        <%= @posts.average(:score).round(2).to_f %>点
+        <% else %>
+        #.##点
+        <% end %>
       </div>
     </div>
   </div>
