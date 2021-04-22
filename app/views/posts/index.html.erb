@@ -4,8 +4,12 @@
   <u>＜投稿一覧＞</u>
 </div>
 
-<div class="contents row">
-  <% @posts.each do |post| %> 
-    <%= render partial: "post", locals: { post: post } %>
-  <% end %>
-</div>
+<%= render partial: "search-output" %>
+
+<% if @posts != nil %>
+  <div class="contents row">
+    <% @posts.each do |post| %> 
+      <%= render partial: "post", locals: { post: post } %>
+    <% end %>
+  </div>
+<% end %>
