@@ -6,10 +6,6 @@
 
 <%= render partial: "search-output" %>
 
-<%= form_with url: posts_path, method: :get do |f| %>
-  <%= render partial: "sort", locals: {f: f} %>
-<% end %>
-
 <% if @posts != nil %>
   <div class="contents row">
     <% @posts.each do |post| %> 
