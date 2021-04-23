@@ -1,0 +1,6 @@
+<div class="sort-select">
+  <div class="contents-header">
+    <u>＜並び替え＞</u>
+  </div>
+  <%= f.select :sort, @sort_list, {selected: @soted}, onChange: "javascript: this.form.submit();", class: "sort-drop" %>
+</div>

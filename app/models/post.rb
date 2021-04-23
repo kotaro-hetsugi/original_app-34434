@@ -19,6 +19,15 @@ class Post < ApplicationRecord
     end
   end
 
+  scope :sort_list, -> {
+    {
+      "投稿の新しい順（デフォルト）" => "created_at DESC",
+      "投稿の古い順" => "created_at ASC",
+      "評価の高い順" => "score DESC",
+      "ランダム" => "rand()"
+    }
+  }
+
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_one_attached :image

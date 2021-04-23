@@ -2,9 +2,14 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
+  before_action :set_sort, only: [:index, :search]
 
   def index
-    @posts = Post.includes(:user).order('created_at desc')
+    if sort_params.present?
+      @posts = Post.includes(:user).order(sort_params[:sort])
+    else
+      @posts = Post.includes(:user).order("created_at DESC")
+    end
   end
 
   def new
@@ -33,13 +38,17 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params)
-    @area = Area.find(params[:area_id])
+    if sort_params.present?
+      @posts = Post.search(search_params).order(sort_params[:sort])
+    else
+      @posts = Post.search(search_params).order("created_at DESC")
+    end
+    @area = Area.find(search_params[:area_id])
   end
 
   def search_candidate
-    return nil if params[:keyword] == ""
-    title = Post.where(['title LIKE ?', "%#{params[:keyword]}%"] )
+    return nil if search_params[:keyword] == ""
+    title = Post.where(['title LIKE ?', "%#{search_params[:keyword]}%"] )
     render json:{ keyword: title }
   end
 
@@ -55,6 +64,19 @@ class PostsController < ApplicationController
 
   def move_to_index
     redirect_to root_path if @post.user_id != current_user.id
+  end
+
+  def search_params
+    params.permit(:keyword,:area_id)
+  end
+
+  def sort_params
+    params.permit(:sort)
+  end
+
+  def set_sort
+    @sort_list = Post.sort_list
+    @soted = sort_params[:sort]
   end
 
 end
