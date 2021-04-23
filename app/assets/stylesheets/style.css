@@ -1124,6 +1124,18 @@ footer p {
   margin-top: 10px;
 }
 
+.sort-select{
+  width: 250px;
+  position: fixed;
+  top: 100px;
+  left: 3vw;
+}
+
+.sort-drop{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
 .item-img {
   position: absolute;
   top: 0;
