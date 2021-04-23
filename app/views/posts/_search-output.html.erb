@@ -1,29 +1,4 @@
-<% if current_page?(root_path) %>      <%# トップページの表示 %>
-  <div class="search-output">
-    <div class="contents-header">
-      <u>＜検索情報＞</u>
-    </div>
-    <div class="output-title">
-      都道府県:<%= "〇〇県" %><br>
-      キーワード:<%= "〜〜〜〜〜" %> 
-    </div>
-    <div class="output-title mt-3">
-      検索件数:<%= "###" %>件<br>
-      平均評価
-    </div>
-    <div class="average-score">
-      <div class="star-rating">
-        <div class="star-rating-back">★★★★★</div>
-      </div>
-      <div class="average-score-display">
-        <%= "#.##" %>点
-      </div>
-    </div>
-    <div class="output-title mt-3">
-      <strong>↑検索時に表示されます↑</strong>
-     </div>
-  </div>
-<% else %>              <%# 検索時の表示 %>
+<% if current_page?(search_posts_path) %>  <%# 検索時の表示 %> 
     <div class="search-output">
     <div class="contents-header">
       <u>＜検索情報＞</u>
@@ -62,5 +37,30 @@
         <% end %>
       </div>
     </div>
+  </div>
+<% else %>                 <%# トップページの表示 %>
+  <div class="search-output">
+    <div class="contents-header">
+      <u>＜検索情報＞</u>
+    </div>
+    <div class="output-title">
+      都道府県:<%= "〇〇県" %><br>
+      キーワード:<%= "〜〜〜〜〜" %> 
+    </div>
+    <div class="output-title mt-3">
+      検索件数:<%= "###" %>件<br>
+      平均評価
+    </div>
+    <div class="average-score">
+      <div class="star-rating">
+        <div class="star-rating-back">★★★★★</div>
+      </div>
+      <div class="average-score-display">
+        <%= "#.##" %>点
+      </div>
+    </div>
+    <div class="output-title mt-3">
+      <strong>↑検索時に表示されます↑</strong>
+     </div>
   </div>
 <% end %>
