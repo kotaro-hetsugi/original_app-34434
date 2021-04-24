@@ -1063,13 +1063,13 @@ footer p {
 
 .search-form{
   position: fixed;
-  width: 28%;
+  width: calc((100vw - 710px)/2);
   font-size: 15px;
-  right: -40px;  
+  right: 0;
 }
 
-.search-input{
-  width: 45%;
+.search-input, .search-result{
+  width: calc(100% - 190px);
 }
 
 .search-btn{
@@ -1080,7 +1080,6 @@ footer p {
   background-color: white;
   margin-left: 95px;
   margin-top: -13px;
-  width: 45%;
 }
 
 .search-result-child{
