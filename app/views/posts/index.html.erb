@@ -1,10 +1,9 @@
 <%= render partial: "search-form" %>
+<%= render partial: "search-output" %>
 
 <div class="contents-header">
   <u>＜投稿一覧＞</u>
 </div>
-
-<%= render partial: "search-output" %>
 
 <%= form_with url: posts_path, method: :get do |f| %>
   <%= render partial: "sort", locals: {f: f} %>
