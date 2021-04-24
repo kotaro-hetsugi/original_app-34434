@@ -1096,7 +1096,6 @@ footer p {
   right: 1vw;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
-  box-sizing: border-box;
   padding-bottom: 10px;
 }
 

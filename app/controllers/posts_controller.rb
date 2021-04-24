@@ -5,11 +5,11 @@ class PostsController < ApplicationController
   before_action :set_sort, only: [:index, :search]
 
   def index
-    if sort_params.present?
-      @posts = Post.includes(:user).order(sort_params[:sort])
-    else
-      @posts = Post.includes(:user).order("created_at DESC")
-    end
+    @posts = if sort_params.present?
+               Post.includes(:user).order(sort_params[:sort])
+             else
+               Post.includes(:user).order('created_at DESC')
+             end
   end
 
   def new
@@ -38,18 +38,19 @@ class PostsController < ApplicationController
   end
 
   def search
-    if sort_params.present?
-      @posts = Post.search(search_params).order(sort_params[:sort])
-    else
-      @posts = Post.search(search_params).order("created_at DESC")
-    end
+    @posts = if sort_params.present?
+               Post.search(search_params).order(sort_params[:sort])
+             else
+               Post.search(search_params).order('created_at DESC')
+             end
     @area = Area.find(search_params[:area_id])
   end
 
   def search_candidate
-    return nil if search_params[:keyword] == ""
-    title = Post.where(['title LIKE ?', "%#{search_params[:keyword]}%"] )
-    render json:{ keyword: title }
+    return nil if search_params[:keyword] == ''
+
+    title = Post.where(['title LIKE ?', "%#{search_params[:keyword]}%"])
+    render json: { keyword: title }
   end
 
   private
@@ -67,7 +68,7 @@ class PostsController < ApplicationController
   end
 
   def search_params
-    params.permit(:keyword,:area_id)
+    params.permit(:keyword, :area_id)
   end
 
   def sort_params
@@ -78,5 +79,4 @@ class PostsController < ApplicationController
     @sort_list = Post.sort_list
     @soted = sort_params[:sort]
   end
-
 end

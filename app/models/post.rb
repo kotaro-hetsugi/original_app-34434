@@ -12,19 +12,20 @@ class Post < ApplicationRecord
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
 
   def self.search(search)
-    if search[:area_id] == "1" && search[:keyword] != ""
+    if search[:area_id] == '1' && search[:keyword] != ''
       Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%", "%#{search[:keyword]}%"])
     else
-      Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%", "%#{search[:keyword]}%"]).where(area_id: search[:area_id])
+      Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%",
+                  "%#{search[:keyword]}%"]).where(area_id: search[:area_id])
     end
   end
 
-  scope :sort_list, -> {
+  scope :sort_list, lambda {
     {
-      "投稿の新しい順（デフォルト）" => "created_at DESC",
-      "投稿の古い順" => "created_at ASC",
-      "評価の高い順" => "score DESC",
-      "ランダム" => "rand()"
+      '投稿の新しい順（デフォルト）' => 'created_at DESC',
+      '投稿の古い順' => 'created_at ASC',
+      '評価の高い順' => 'score DESC',
+      'ランダム' => 'rand()'
     }
   }
 
