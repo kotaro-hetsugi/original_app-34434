@@ -1,8 +1,9 @@
-<% if current_page?(search_posts_path) %>  <%# 検索時の表示 %> 
-    <div class="search-output">
-    <div class="contents-header">
-      <u>＜検索情報＞</u>
-    </div>
+<div class="search-output">
+  <div class="contents-header">
+    <u>＜検索情報＞</u>
+  </div>
+  <div class=search-output-contents>
+  <% if current_page?(search_posts_path) %>  <%# 検索時の表示 %> 
     <div class="output-title">
       都道府県:
       <% if params[:area_id] != "1" %>
@@ -37,12 +38,7 @@
         <% end %>
       </div>
     </div>
-  </div>
-<% else %>                 <%# トップページの表示 %>
-  <div class="search-output">
-    <div class="contents-header">
-      <u>＜検索情報＞</u>
-    </div>
+  <% else %>                 <%# トップページの表示 %>
     <div class="output-title">
       都道府県:<%= "〇〇県" %><br>
       キーワード:<%= "〜〜〜〜〜" %> 
@@ -61,6 +57,7 @@
     </div>
     <div class="output-title mt-3">
       <strong>↑検索時に表示されます↑</strong>
-     </div>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>
