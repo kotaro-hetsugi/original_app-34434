@@ -1102,7 +1102,7 @@ footer p {
 
 .search-output-contents{
   font-size: 15px;
-  padding-left: 10%;
+  padding-left: calc((100% - 240px)/2);
 }
 
 .output-title{
