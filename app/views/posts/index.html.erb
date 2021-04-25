@@ -1,13 +1,13 @@
 <%= render partial: "search-form" %>
 <%= render partial: "search-output" %>
 
-<div class="contents-header">
-  <u>＜投稿一覧＞</u>
-</div>
-
 <%= form_with url: posts_path, method: :get do |f| %>
   <%= render partial: "sort", locals: {f: f} %>
 <% end %>
+
+<div class="contents-header">
+  <u>＜投稿一覧＞</u>
+</div>
 
 <% if @posts != nil %>
   <div class="contents row">
