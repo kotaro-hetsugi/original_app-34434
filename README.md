@@ -51,6 +51,12 @@
 
 # 3.接続方法
   ## 3-1.URL
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script language="JavaScript">
+$(document).ready( function () {
+   $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+})
+</script>
   https://travellers-34434.herokuapp.com/<br>
   [https://travellers-34434.herokuapp.com/](https://travellers-34434.herokuapp.com/){:target="_blank" rel="noopener"}<br>
   <a href="https://travellers-34434.herokuapp.com/" target = "_blank"  rel = "noopener">リンク</a>
