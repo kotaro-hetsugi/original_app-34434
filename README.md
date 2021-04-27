@@ -53,7 +53,7 @@
   ## 3-1.URL
   https://travellers-34434.herokuapp.com/<br>
   [りんく](https://travellers-34434.herokuapp.com/)<br>
-  <a href="https://travellers-34434.herokuapp.com/" target = "_blank"  rel = "noopener">リンク</a>
+  <a href="#" target = "_blank"  rel = "noopener">リンク</a>
 
   ## 3-2.テスト用アカウント
   テストID：test1@test1<br>
