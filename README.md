@@ -55,6 +55,7 @@
   [りんく](https://travellers-34434.herokuapp.com/)<br>
   <a href="https://travellers-34434.herokuapp.com/" target = "_blank"  rel = "noopener">リンク</a>
   <a href="https://travellers-34434.herokuapp.com/" target="_blank" rel="noopener noreferrer">新規タブで開く</a>
+  [Google](http://www.google.co.jp/){target="_blank"}
 
   ## 3-2.テスト用アカウント
   テストID：test1@test1<br>
