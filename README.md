@@ -52,6 +52,7 @@
 # 3.接続方法
   ## 3-1.URL
   https://travellers-34434.herokuapp.com/<br>
+  ※別タブでお開きください
 
   ## 3-2.テスト用アカウント
   テストID：test1@test1<br>
