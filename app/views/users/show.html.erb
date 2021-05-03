@@ -1,1 +1,9 @@
 <%= render partial: "posts/search-form" %>
+
+<% if @posts != nil %>
+  <div class="contents row">
+    <% @posts.each do |post| %> 
+      <%= render partial: "posts/post", locals: { post: post } %>
+    <% end %>
+  </div>
+<% end %>
