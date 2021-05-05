@@ -22,7 +22,7 @@
     <div class="show-content-top">
       <p><%= @post.area.name %></p>
       <span class="name has-text-right">
-        <a href="#">
+        <a href='/users/<%= @post.user.id %>'>
         <p>投稿者</p><%= @post.user.nickname %>
         </a>
       </span>
