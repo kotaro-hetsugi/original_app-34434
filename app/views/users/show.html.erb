@@ -1,5 +1,9 @@
 <%= render partial: "posts/search-form" %>
 
+<div class="contents-header">
+  <u>＜<%= @posts[0].user.nickname %>さんの投稿＞</u>
+</div>
+
 <% if @posts != nil %>
   <div class="contents row">
     <% @posts.each do |post| %> 
