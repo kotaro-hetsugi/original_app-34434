@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :comments ,only: [:create]
+    resource :likes, only: [:create, :destroy]
     collection do
       get 'search'
       get 'search_candidate'
