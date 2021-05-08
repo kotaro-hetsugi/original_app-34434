@@ -44,6 +44,9 @@
         <span>投稿日:</span>
         <%= l @post.created_at, format: :date %>
       </div>
+      <div id='likes_buttons_<%= @post.id %>'>
+        <%= render partial: 'likes/like', locals: {post: @post} %>
+      </div>
     </div>
   </div>
 
