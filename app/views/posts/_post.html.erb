@@ -7,7 +7,15 @@
       </span>
     </div>
     <div class="content-bottom">
-      <div class="travel-title"><%= post.title %></div>
+      <div class="travel-title">
+        <%= post.title %><br>
+        <span class="fas fa-heart is-size-5">
+          <span class="has-text-weight-light">
+            <%= post.likes.count %>
+          </span>
+        </span>
+      </div>
+
       <div class="star-rating mb-2">
         <div class="star-rating-front" style="width: <%= post.score*100/5 %>%">★★★★★</div>
         <div class="star-rating-back">★★★★★</div>
