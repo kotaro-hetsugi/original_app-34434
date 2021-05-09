@@ -76,4 +76,4 @@ gem "aws-sdk-s3", require: false
 
 gem 'rename'
 
-gem 'ransack'
+gem 'jquery-rails'
