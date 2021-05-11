@@ -196,6 +196,8 @@
   - 投稿の古い順
   - 評価の高い順
   - ランダム
+
+  ## 5-7.いいね機能
   
 # 6.テーブル設計
 [![Image from Gyazo](https://i.gyazo.com/60009e1a2c1f3646812260d47bd49273.png)](https://gyazo.com/60009e1a2c1f3646812260d47bd49273)
