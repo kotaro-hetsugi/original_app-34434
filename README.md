@@ -206,7 +206,7 @@
   - 他ユーザーの投稿
   ### 制限
   - 一つの投稿に対して一回まで
-  ![5c913ce130a7cf44deaa6b33b39ad4a3](https://user-images.githubusercontent.com/78333577/118077184-95198c80-b3ee-11eb-98f6-0d847bbf9665.gif)
+  ![45aabe7298b4c06699d333cbc619ec19](https://user-images.githubusercontent.com/78333577/118077500-2426a480-b3ef-11eb-8ac8-df25bb9f7367.gif)
   
 # 6.テーブル設計
 [![Image from Gyazo](https://i.gyazo.com/60009e1a2c1f3646812260d47bd49273.png)](https://gyazo.com/60009e1a2c1f3646812260d47bd49273)
