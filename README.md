@@ -199,6 +199,9 @@
 
   ## 5-7.いいね機能
   ログインユーザーは投稿に対して、いいね(♡)をつけることができます。<br>
+  詳細表示の♡をクリックすると、♥が塗りつぶされカウントが1増えます。<br>
+  もう一度♥をクリックすると、♡の塗り潰しが消え、カウントが1減ります。
+  ![45aabe7298b4c06699d333cbc619ec19](https://user-images.githubusercontent.com/78333577/118077500-2426a480-b3ef-11eb-8ac8-df25bb9f7367.gif)
   ### 対象ユーザー
   - ログインユーザー
   ### 対象投稿
@@ -206,7 +209,6 @@
   - 他ユーザーの投稿
   ### 制限
   - 一つの投稿に対して一回まで
-  ![45aabe7298b4c06699d333cbc619ec19](https://user-images.githubusercontent.com/78333577/118077500-2426a480-b3ef-11eb-8ac8-df25bb9f7367.gif)
   
 # 6.テーブル設計
 [![Image from Gyazo](https://i.gyazo.com/60009e1a2c1f3646812260d47bd49273.png)](https://gyazo.com/60009e1a2c1f3646812260d47bd49273)
