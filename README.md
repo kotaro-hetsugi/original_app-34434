@@ -254,6 +254,13 @@
 - belongs_to :user
 - belongs_to :post
 
+## likes テーブル
+
+| Column  | Type    | Options |
+| ------- | ------- | ------- |
+| user_id | integer |         |
+| post_id | integer |         |
+
 # 7.実装予定の機能
 ## フロントエンド
 - アプリ説明<br>
