@@ -225,6 +225,7 @@
 
 - has_many :posts
 - has_many :comments
+- has_many :likes
 
 ## posts テーブル
 
@@ -240,6 +241,7 @@
 
 - has_many :comments
 - belongs_to :user
+- has_many :likes
 
 ## comments テーブル
 
@@ -260,6 +262,11 @@
 | ------- | ------- | ------- |
 | user_id | integer |         |
 | post_id | integer |         |
+
+### Association
+
+- belongs_to :user
+- belongs_to :post
 
 # 7.実装予定の機能
 ## フロントエンド
