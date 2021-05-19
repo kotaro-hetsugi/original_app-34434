@@ -281,6 +281,7 @@
   ファイル添付時に、画像ファイル以外のデータが添付された際のバリデーションを追加予定です。
 - 画像ファイル圧縮
   画像データのサイズが一定以上の場合の圧縮処理を実装予定です。
+## AWS
 
 # 8.要件定義（Googleスプレッドシート）
 https://docs.google.com/spreadsheets/d/1OKEdCtfZPbojakxj23h31DbT7OkT__Vz9R6gUdOKmLg/edit#gid=0
