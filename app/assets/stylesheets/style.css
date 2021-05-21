@@ -1233,14 +1233,14 @@ footer p {
 
 .about_btn {
   position: absolute;
-  left: 300px;
-  top: 0px;
+  left: 150px;
+  top: 3px;
   height: 34px;
   width: 70px;
-  padding: 8px 5px;
-  border: black solid 1px;
+  padding: 7px 5px;
+  border: chocolate solid 1.5px;
   font-size: 12px;
-  border-radius: 35px / 17px;
+  border-radius: 15px;
   background-color: rgb(255, 237, 177);
   text-align: center;
   color:chocolate
