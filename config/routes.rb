@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
   devise_for :users
   root to: 'posts#index'
 
@@ -12,4 +11,5 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:show]
+  get 'abouts/summary'
 end
