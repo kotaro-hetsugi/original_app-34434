@@ -2,11 +2,11 @@
   <div class="container">
     <h3><b>概要</b></h3>
     <div class="about_content">
-      <strong>Travellers</strong>は、旅行先のレビューアプリケーションです<br>
+      <strong style="color: #3273dc;">Travellers</strong>は、旅行先のレビューアプリケーションです<br>
       主な機能としては・・・<br>
       <ul>
         <li>実際に行った旅行先をレビューする</li>
-        <li>他の人のレビューにコメントや、いいね（♡）をつける</li>
+        <li>他の人のレビューにコメントや、いいね（<span class="fas fa-heart" style="color: #3273dc;"></span>）をつける</li>
         <li>レビューを検索する</li>
       </ul>
       などがあります
@@ -32,16 +32,19 @@
       </div><br>
       ログイン後、アプリの右上『投稿する』ボタンから新規投稿をしましょう<br>
       <%= image_tag"210522_post.gif" %>
-      ※【必須】の項目は入力しないと、送信できません。
+      <strong style="color: #ff0000;">※必ず実際に行ったことがある場所のみ投稿してください</strong><br>
+      <%# <>※必ず実際に行ったことがある場所のみ投稿してください %>
+      ※【必須】の項目は入力しないと、送信できません
     </div>
 
     <div class="about_content">
       <div class="about_title">
-        いいね(♡)&コメントをしよう！
+        いいね（<span class="fas fa-heart" style="color: #3273dc;"></span>）&コメントをしよう！
       </div><br>
-      ユニークな投稿には詳細表示画面から、いいね(♡)をつけましょう！<br>
+      ユニークな投稿には詳細表示画面から、いいね（<span class="fas fa-heart" style="color: #3273dc;"></span>）をつけましょう！<br>
       <%= image_tag"210522_like.gif" %>
       できれば、コメントを残しましょう！
+      <%= image_tag"210522_comment.gif" %>
     </div>
   </div>
 
