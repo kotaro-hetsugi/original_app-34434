@@ -1,7 +1,7 @@
     <%= form_with(model: @post, local: true) do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="weight-bold-text">
-       【必須】投稿画像
+       【必須】投稿画像(.png / .jpeg / .jpg)
       </div>
       <%= f.file_field :image, placeholder:"gazou", id:"item-image" %>
         
