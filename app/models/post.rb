@@ -11,11 +11,15 @@ class Post < ApplicationRecord
 
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
 
-  validate :image_content_type
+  validate :image_content_type, if: :was_attached?
 
   def image_content_type
     extension = ['image/png', 'image/jpg', 'image/jpeg']
     errors.add(:image, "の拡張子が間違っています") unless image.content_type.in?(extension)
+  end
+
+  def was_attached?
+    self.image.attached?
   end
 
   def self.search(search)
