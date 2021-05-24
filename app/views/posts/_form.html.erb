@@ -1,14 +1,14 @@
     <%= form_with(model: @post, local: true) do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="weight-bold-text">
-       【必須】投稿画像
+       【必須】投稿画像(.png / .jpeg / .jpg)
       </div>
-      <%= f.file_field :image, placeholder:"gazou", id:"item-image" %>
+      <%= f.file_field :image, id:"item-image" %>
         
       <div class="weight-bold-text">
        【必須】旅先名
       </div>
-      <%= f.text_field :title, placeholder: "（記入例）富士山" %>
+      <%= f.text_field :title, placeholder: "旅先名をご記入ください" %>
 
       <div class="weight-bold-text">
        【任意】自由記入欄

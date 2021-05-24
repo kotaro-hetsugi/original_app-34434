@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :area
 
   validates :image, presence: { message: 'を投稿してください' }
 
@@ -10,6 +9,17 @@ class Post < ApplicationRecord
   end
 
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
+
+  validate :image_content_type, if: :was_attached?
+
+  def image_content_type
+    extension = ['image/png', 'image/jpg', 'image/jpeg']
+    errors.add(:image, 'の拡張子が間違っています') unless image.content_type.in?(extension)
+  end
+
+  def was_attached?
+    image.attached?
+  end
 
   def self.search(search)
     if search[:area_id] == '1' && search[:keyword] != ''
@@ -29,6 +39,7 @@ class Post < ApplicationRecord
     }
   }
 
+  belongs_to :area
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_one_attached :image
