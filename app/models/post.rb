@@ -11,6 +11,13 @@ class Post < ApplicationRecord
 
   validates :area_id, numericality: { other_than: 1, message: 'を選択してください' }
 
+  validate :image_content_type
+
+  def image_content_type
+    extension = ['image/png', 'image/jpg', 'image/jpeg']
+    errors.add(:image, "の拡張子が間違っています") unless image.content_type.in?(extension)
+  end
+
   def self.search(search)
     if search[:area_id] == '1' && search[:keyword] != ''
       Post.where(['title LIKE(?) OR text LIKE(?)', "%#{search[:keyword]}%", "%#{search[:keyword]}%"])
