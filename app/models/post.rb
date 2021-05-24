@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :area
 
   validates :image, presence: { message: 'を投稿してください' }
 
@@ -40,6 +39,7 @@ class Post < ApplicationRecord
     }
   }
 
+  belongs_to :area
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_one_attached :image
